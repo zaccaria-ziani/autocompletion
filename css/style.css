@@ -1,0 +1,42 @@
+
+
+
+/* Paragraphes en bleu par défaut */
+p
+{
+    color: blue;
+}
+
+/* Texte nav bar */
+
+.navbar-text
+{
+    font-style: italic;
+}
+
+#recherche
+{
+    background: ;
+}
+
+
+
+#section1
+{
+    width: 100%;
+	height: 1200px;
+	background:url("../image/background.jpg");
+	background-attachment: fixed;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.imgthauvin
+{
+width: 25px;
+}
+
+body
+{
+   
+}
