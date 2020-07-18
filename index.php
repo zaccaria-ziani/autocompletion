@@ -1,6 +1,4 @@
-<?php
-session_start();
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,20 +46,21 @@ session_start();
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdown_target">
                 <ul class="navbar-nav">
-                <a class="dropdown-item">Joueurs Français 2019/2020 </a>
+                <a class="dropdown-item">Joueurs Français  </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item">Joueurs OldSchool </a>
+                <a class="dropdown-item">Joueurs Brésiliens </a>
                 
                 </ul>
                
             </div>
            
             </li>
-            <form>
-      <input type = "text" id="recherche"/>
+            <form method="get" action="search">
+      <input type="text" name="q" id="recherche" placeholder="Rechercher" />
+      <button class="searchbtn" type="submit">Recherche</button>
   </form>
         </ul>
-        </div>
+       
     </nav>
 
     <img src="image/background.jpg" class="img-fluid">
@@ -71,7 +70,7 @@ session_start();
 
    <!--LIER LE JS/-->
    
-    <script type="text/javascript" src="jquery-3.4.1.js"></script>
+ <script type="text/javascript" src="jquery-3.4.1.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
     
     <script>
@@ -107,6 +106,27 @@ $('#recherche').autocomplete({
 });
 
   </script>
+  <script>
+  $(document).ready(function(){
+      $('#recherche').keyup(function(){
+var query = $ (this).val();
+if(query !='')
+{
+    $.ajax({
+        url:"search.php",
+        method:"POST",
+        data:{query:query},
+        success:function(data)
+        {
+            $('#recherche').fadeIn();
+            $('#recherche').html(data);
+        }
+    })
+}
+      });
+
+  });
+  </script>-->
   <div class="container-fluid ">
         <div class="container">
             <div class="row">
