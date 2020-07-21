@@ -4,8 +4,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-  
-    <title>Autocompletion</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" />
+    <title>Autocompletion</title>
 </head>
 <body>
 <!-- <div class="jumbotron" style="margin-bottom: 0px;">
@@ -27,28 +29,24 @@
       <span class="navbar-toggler-icon"></span>  
     </button>
 <div class="collapse navbar-collapse" id="collapse_target">
-    <a class="navbar-brand"><img src="image/thauvin.png" class="imgthauvin"></a>
+    <a href="http://localhost/autocompletion/index.php" class="navbar-brand"><img src="image/logosite.png" class="imgthauvin"></a>
 
-    <span class="navbar-text">Le site de vos joueurs préférés</span>
+    <span class="navbar-text"></span>
         <ul class="navbar-nav">
         
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle"  data-toggle="dropdown" 
-                data-target="dropdown_target" href="http://localhost/autocompletion/index.php?#">Accueil
-            <span class="caret"></span>
-            </a>
+           
             
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle"  data-toggle="dropdown" 
-                data-target="dropdown_target" href="#">Rechercher
+                data-target="dropdown_target" href="#">Joueurs par pays
             <span class="caret"></span>
             </a>
             <div class="dropdown-menu" aria-labelledby="dropdown_target">
                 <ul class="navbar-nav">
-                <a class="dropdown-item">Joueurs Français  </a>
+                <a href="http://localhost/autocompletion/search?q=france" class="dropdown-item">Joueurs Français  </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item">Joueurs Brésiliens </a>
+                <a href="http://localhost/autocompletion/search?q=bresil"class="dropdown-item">Joueurs Brésiliens </a>
                 
                 </ul>
                
@@ -57,7 +55,7 @@
             </li>
             <form method="get" action="search">
       <input type="text" name="q" id="recherche" placeholder="Rechercher" />
-      <button class="searchbtn" type="submit">Recherche</button>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Rechercher</a>
   </form>
         </ul>
        
@@ -75,34 +73,57 @@
     
     <script>
       var liste = [
-    "Thauvin",
+        "Thauvin",
     "Payet",
-    "Giroud",
+    "Griezmann",
     "Varane",
     "Umtiti",
     "Gueye",
     "Pavard",
     "Mbappé",
     "Coman",
-    "Fekir",
+    "Kanté",
     "Clément Lenglet",
     "Ferland Mendy",
     "Zinedine Zidane",
-    "Lilian Thuram",
-    "Robert Pires",
-    "Ginola",
+    "Sanson",
+    "Mandanda",
+    "Gignac",
     "Cantona",
-    "Gallas",
-    "Nasri",
-    "Ribery",
-    "Leboeuf",
-    "Laurent Blanc",
-    "Didier Deschamps",
-    "Benoit Cheyrou"
+    "Patrice Evra",
+    "Kamara",
+    "Franck Ribery",
+    "Neymar",
+    "Rivaldo",
+    "Gueye",
+    "Cafu",
+    "Kaka",
+    "Robinho",
+    "Hulk",
+    "Dani Alves",
+    "Firmino",
+    "Brandao",
+    "Socrates",
+    "Lucas",
+    "Willian",
+    "Oscar",
+    "Pelé",
+    "Juninho",
+    "Thiago Silva",
+    "Jesus",
+    "David Luiz",
+    "Casemiro",
+    "Vinicius",
+    "Richarlison",
+    "Adriano",
+    "Mountinho",
+    "Roberto Carlos",
+    "Ronaldinho"
+    
     ];
 $('#recherche').autocomplete({
     source : liste,
-    minLength : 1
+    minLength : 2
 });
 
   </script>
@@ -126,19 +147,19 @@ if(query !='')
       });
 
   });
-  </script>-->
+  </script>
   <div class="container-fluid ">
         <div class="container">
             <div class="row">
                 <article class="col-xs-12 col-md-12 col-lg-12">
-                    <h1>Mon article</h1>
+                    <h1>Le site de vos joueurs préférés</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis corrupti porro mollitia velit
                     voluptatem nostrum enim libero fuga alias autem rem similique laboriosam, molestiae hic error eaque
                     ea odit deleniti.
                     
                 </article>
                 <article class="col-xs-12 col-md-4 col-lg-4">
-                    <h1>Mon article</h1>
+                    <h1>France</h1>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis corrupti porro mollitia velit
                     voluptatem nostrum enim libero fuga alias autem rem similique laboriosam, molestiae hic error eaque
                     ea odit deleniti.</p>
@@ -146,7 +167,7 @@ if(query !='')
                 </article>
                
                 <article class="col-xs-12 col-md-4 col-lg-4">
-                    <h1>Mon article</h1>
+                    <h1>Brésil</h1>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis corrupti porro mollitia velit
                     voluptatem nostrum enim libero fuga alias autem rem similique laboriosam, molestiae hic error eaque
                     ea odit deleniti.
@@ -164,7 +185,7 @@ if(query !='')
      </div class>
      <section id="section1">
 
-     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id maxime nesciunt sit veniam! Quam voluptas nam id similique ipsa repellendus commodi velit fugit sapiente. Sequi reprehenderit officia harum voluptate quia.</p>
+     
      </section>
 </body>
 </html>
