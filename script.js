@@ -1,7 +1,6 @@
 $(document).ready(function(){
     $("#recherche").keyup(function(){
         let text = $("#recherche").val()
-        console/log(text);
         if(text == ""){
 
             alert("Veuillez entrez un nom");
@@ -9,7 +8,7 @@ $(document).ready(function(){
         }
         else{
             $.ajax({
-                url: "recherche.php",
+                url: "research.php",
                 data: {"recherche":text},
                 method:"GET",
                 success: (data) => {

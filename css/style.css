@@ -13,7 +13,7 @@ article
 /* Paragraphes en bleu par défaut */
 p
 {
-    color: blue;
+    color:gainsboro;
 }
 
 /* Texte nav bar */
@@ -54,18 +54,59 @@ width: 55px;
 .imgfoot
 {
 width: 35px;
+position: absolute;
+
 
 }
-.club
-{
-width: 150px;
-margin-left: 86px;
 
+.cphotos
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+@keyframes rotate
+{
+  0%{
+    
+      transform: rotate(0);
+  }  
+  50%{
+      transform: rotate(180deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+
+
+.logoclub 
+{
+    
+width: 150px;
+
+
+}
+
+.cercle
+{
+    animation:rotate 26s linear infinite;
+    position: absolute;
+}
+
+.photo
+{
+    width: 340px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 body
 {
-   
+    font-family: 'Permanent Marker', cursive;
 }
 
 .infoplayers
@@ -75,5 +116,5 @@ body
 {
     box-shadow: 32px 42px 38px 4px black;
     border-radius: 10px;
-    margin-left: 104px;
+   
 }
